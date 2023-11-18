@@ -1,4 +1,7 @@
-﻿﻿# Get API key from here: https://ipgeolocation.io/ and insert below
+# See https://medium.com/@ysingh0121/tutorial-set-up-microsoft-azure-sentinel-to-monitor-live-global-cyber-attacks-with-geolocation-da957e1f5cf5
+# for full tutorial of the lab
+
+# Get API key from here: https://ipgeolocation.io/ and insert below
 $API_KEY      = ""
 $LOGFILE_NAME = "failed_rdp.log"
 $LOGFILE_PATH = "C:\ProgramData\$($LOGFILE_NAME)"
@@ -41,7 +44,7 @@ if ((Test-Path $LOGFILE_PATH) -eq $false) {
     write-Sample-Log
 }
 
-# Infinite Loop that keeps checking the Event Viewer logs.
+# Infinite loop that keeps checking the Event Viewer logs.
 while ($true)
 {
     
